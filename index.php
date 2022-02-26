@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rock, Paper and Scissors</title>
+	<link rel="icon" href="images/rock.png">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+		<!-- As a link -->
+<nav class="navbar navbar-light bg-light center">
+  <h4 class="text-center w-100">Rock, Paper and Scissors</h4>
+</nav>
+
+<div class="container-fluid">
+	<!-- round count -->
+	<h5 class="text-center w-100 p-3 rounds">Round <span id="c_round">1</span></h5>
+
+	<div class="row text-center w-100 score_board">
+	    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+	      <h5>Win</h5>
+	      <p id="w_user">0</p>
+	    </div>
+	    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+	      <h5>Ties</h5>
+	      <p id="t">0</p>
+	    </div>
+	    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+	      <h5>Win</h5>
+	      <p id="w_comp">0</p>
+	    </div>
+	 </div>
+
+	<div class="container1">
+	    <div class="row" >
+	        <div class="col-6 col-md-4">
+	            <div class="card game_div">
+	            	<div class="game_img" style="background-image: url(images/default_hand.png);"></div>
+	            </div>
+	        </div>
+
+	        <div class="struc_score col-12 col-md-4 order-md-2 order-12">
+	            <div class="card" style="border: none;text-align: center;padding: 10px;">
+	            	<h3 class="round_title">Rounds</h3>
+	           		
+	           		<div id="details_score">
+	           			
+	           		</div>
+	            	
+	            </div>
+	        </div>
+
+	        <div class="col-6 col-md-4 order-3">
+	            <div class="card game_div">
+	            	<div class="game_img2" style="background-image: url(images/default_hand.png);"></div>
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="row user_btn_game">
+	    	<div class="col-12 col-md-4 game_btn">
+	    		<div class="container">
+	    			<div class="row text-center">
+		    			<div class="col-4 col-sm-4">
+		    				<button class="rock_sec" id="rock">
+		    					<img src="images/hand-rock.png" alt="">
+		    				</button>
+		    			</div>
+		    			<div class="col-4 col-sm-4">
+		    				<button class="paper_sec" id="paper">
+		    					<img src="images/hand-paper.png" alt="">
+		    				</button>
+		    			</div>
+		    			<div class="col-4 col-sm-4">
+		    				<button class="scissor-sec" id="scissor">
+		    					<img src="images/hand-scissor.png" alt="">
+		    				</button>
+		    			</div>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	<div class="col-12 col-md-4 THE-AI">
+	    		
+	    	</div>
+	    	<div class="col-12 col-md-4 game_btn2 ">
+	    		<!-- <h5 class="text-center">See How The Computer is THINKING</h5> -->
+	    	</div>
+	    </div>
+</div>
+  
+  <div class="show_message">
+  	<span id="my_msg"></span>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

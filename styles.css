@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Heebo', sans-serif;
+}
+
+::selection {
+    background: #222;
+    color: #faf9f8;
+    text-shadow: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+    border: 1px solid hsla(0,0%,100%,.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+body
+{
+	color: #222;
+	margin: 0;
+	font-family: proxima-nova,Helvetica,Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-color: #020a20;
+	overflow-x: hidden!important;
+}
+
+.rounds
+{
+	font-size: 20px;
+	color: red;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.score_board
+{
+    width: 100%;
+    height: 10vh
+}
+
+.score_board  div h5
+{
+	text-transform: uppercase;
+    font-family: Josefin Sans,sans-serif;
+    font-weight: 700;
+    color: #9d9cb8;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.score_board  div p
+{
+	text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 2;
+    margin: 0;
+    color: #000;
+}
+
+.card
+{
+    margin-top: 40px;
+    height: 544px;  
+}
+.game_div
+{
+    padding: 20% 0;
+    overflow: hidden;
+}
+.game_img,.game_img2
+{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: -20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.game_img2
+{
+    transform: scaleX(-1);
+    left: 20px;
+}
+
+.round_title
+{
+    font-size: 30px;
+    color: #010101;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    display: block
+}
+
+.user_btn_game
+{
+    position: relative;
+    top: -138px;
+}
+
+.user_btn_game .THE-AI
+{
+    top:-120px;
+}
+
+.THE-AI
+{
+    width: 100%;
+    color: #010101;
+}
+
+.THE-AI h5
+{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.rock_sec,.paper_sec,.scissor-sec
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c72c41;
+    cursor: pointer;
+    transition: .5s ease-in-out all;
+    outline: none;
+    border: none;
+}
+
+.rock_sec:hover,.paper_sec:hover,.scissor-sec:hover
+{
+    opacity: .9
+}
+
+.rock_sec img,.paper_sec img,.scissor-sec img
+{
+    width: 50px;
+    height: 50px;
+    filter: invert(200%);
+}
+.struc_score
+{
+    top: 150px;
+}
+
+#details_score
+{
+    padding: 10px;
+    height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 1;
+    box-sizing: content-box; 
+}
+
+.show_message
+{
+    position: fixed;
+    bottom: 0;
+    padding: 15px;
+    width: 250px;
+    background: green;
+    margin: 10px;
+    color: #fff;
+    transition: .5s ease-in-out all;
+    left: -300px;
+    z-index: 1;
+}
+
+/*jquery added classes*/
+
+.animate_hand_default_user
+{
+    animation: animate_hand .5s ease-in-out infinite;
+    position: absolute;
+    left: -150px
+}
+
+@keyframes animate_hand
+{
+    50%
+    {
+        transform: rotateZ(-15deg) scaleX(1);
+    }
+    
+    100%
+    {
+        transform: rotateZ(0deg);
+    }
+}
+
+.animate_hand_default_comp
+{
+    animation: animate_hand_comp .5s ease-in-out infinite;
+}
+
+@keyframes animate_hand_comp
+{
+    50%
+    {
+        transform: rotateZ(15deg) scaleX(-1);
+    }
+    
+    100%
+    {
+        transform: rotateZ(0deg)  scaleX(-1);
+    }
+}
+
+
+.font_inc_score
+{
+    animation: inc_font 1s ease-in-out infinite;
+}
+
+
+@keyframes inc_font
+{
+    50%
+    {
+        font-size: 50px;
+        font-weight: 700;
+        color: green;
+    }
+    
+    100%
+    {
+        font-size: 40px;
+        font-weight: 700;
+    }
+}
+
+
+@media only screen and (max-width: 767px)
+{
+    .struc_score
+    {
+        top: 220px
+    }
+
+    .game_btn
+    {
+        position: relative;
+        top: -370px;
+    }
+    .game_img,.game_img2
+    {
+        height: 100px;
+         position: absolute;
+        left: -15px;
+    }
+    .game_img2
+    {
+        left: 15px;
+    }
+    .user_btn_game .THE-AI
+    {
+        top: 270px
+    }
+
+    .container1{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .game_div
+    {
+        margin-top: 40px;
+        height: 200px
+    }
+
+    #details_score
+    {
+        height: 1000px
+    }
+}
+
